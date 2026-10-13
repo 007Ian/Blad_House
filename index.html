@@ -65,6 +65,7 @@
                 <a href="#tell-me-your-story" class="hover:text-gray-500 transition-colors duration-300 py-2">Tell me your story</a>
                 <a href="#about" class="hover:text-gray-500 transition-colors duration-300 py-2">About</a>
                 <a href="#bookshelf" class="hover:text-gray-500 transition-colors duration-300 py-2">Bookshelf</a>
+                <a href="#contact" class="hover:text-gray-500 transition-colors duration-300 py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -195,7 +196,7 @@
                             <li>Publishing</li>
                         </ul>
                         <div class="mt-auto">
-                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                            <a href="#contact" class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</a>
                         </div>
                     </div>
                     
@@ -211,7 +212,7 @@
                             <li>Advertising Assistance</li>
                         </ul>
                         <div class="mt-auto">
-                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                            <a href="#contact" class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</a>
                         </div>
                     </div>
                     
@@ -228,33 +229,39 @@
                             <li>Social Media Assistance</li>
                         </ul>
                         <div class="mt-auto">
-                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                            <a href="#contact" class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tell me your story Section -->
+
+<!-- Tell me your story Section -->
         <section id="tell-me-your-story" class="py-48 px-8 md:px-16 flex items-center justify-center min-h-[80vh]">
             <div class="max-w-4xl mx-auto w-full text-center">
                 <h2 class="font-serif text-5xl md:text-7xl mb-12 leading-tight">Tell me your story.</h2>
-                <form class="max-w-2xl mx-auto space-y-12">
+                
+                <form action="https://formspree.io/f/mgaoljng" method="POST" class="max-w-2xl mx-auto space-y-12">
                     <div class="relative">
-                        <input type="text" placeholder="Your Name" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
                     </div>
+                    
                     <div class="relative">
-                        <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
                     </div>
+                    
                     <div class="relative">
-                        <textarea placeholder="Describe the vision..." rows="3" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300 resize-none"></textarea>
+                        <textarea name="message" placeholder="Describe the vision..." required rows="4" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300 resize-none"></textarea>
                     </div>
-                    <button type="button" class="mt-8 px-16 py-6 bg-black text-white text-xs tracking-[0.2em] uppercase hover:bg-gray-800 transition-colors w-full md:w-auto">
-                        Begin Narrative
+                    
+                    <button type="submit" class="mt-8 px-16 py-6 bg-black text-white text-xs tracking-[0.2em] uppercase hover:bg-gray-800 transition-colors w-full md:w-auto">
+                        Send Message
                     </button>
                 </form>
             </div>
         </section>
+
 
         <!-- About Section -->
         <section id="about" class="py-32 md:py-48 px-8 md:px-16 max-w-[1600px] mx-auto">
@@ -267,9 +274,9 @@
                     <h3 class="font-serif text-5xl mb-8 leading-tight"> Jessica Cleaver Blad</h3>
                     <p class="font-light text-lg text-gray-600 mb-8 leading-relaxed">
                         Jessica Cleaver Blad is an illustrator, designer, and storyteller with a passion for bringing children’s stories to life. She earned her degree in Illustration & Publishing from Brigham Young University–Idaho and has illustrated and published multiple children’s books, including her most recent title, If I Could Fly.
-
-Jessica’s mission is to help aspiring authors share their stories with the world through thoughtful, imaginative illustrations. She enjoys guiding new authors through the self-publishing process, making the journey approachable. She loves the moment when the book is finally held by the author. 
+                    </p>
                     <p class="font-light text-lg text-gray-600 leading-relaxed">
+                        Jessica’s mission is to help aspiring authors share their stories with the world through thoughtful, imaginative illustrations. She enjoys guiding new authors through the self-publishing process, making the journey approachable. She loves the moment when the book is finally held by the author.
                     </p>
                 </div>
             </div>
@@ -336,6 +343,38 @@ Jessica’s mission is to help aspiring authors share their stories with the wor
 
                     </div>
                 </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+        <section id="contact" class="py-32 px-8 md:px-16 bg-white">
+            <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start gap-16 border-t border-gray-100 pt-32">
+                
+                <!-- Friendly Greeting -->
+                <div class="max-w-xl">
+                    <h2 class="font-sans text-xs tracking-[0.3em] uppercase mb-8 text-gray-500">Get in Touch</h2>
+                    <h3 class="font-serif text-5xl md:text-6xl mb-6 leading-tight">Let's create something beautiful.</h3>
+                    <p class="font-light text-xl text-gray-500 leading-relaxed">
+                        Whether you have a fully drafted manuscript, a quick question about the process, or just the seed of an idea—my inbox is always open.
+                    </p>
+                </div>
+                
+                <!-- Direct Links -->
+                <div class="flex flex-col gap-12 pt-4">
+                    <div>
+                        <p class="font-sans text-xs tracking-[0.2em] uppercase text-gray-400 mb-4">Social</p>
+                        <a href="https://www.instagram.com/jessicacleaverbladillustration/" target="_blank" rel="noopener noreferrer" class="text-xl font-light hover:text-gray-500 transition-colors border-b border-black pb-1 inline-block">
+                            Instagram
+                        </a>
+                    </div>
+                    <div>
+                        <p class="font-sans text-xs tracking-[0.2em] uppercase text-gray-400 mb-4">Direct Email</p>
+                        <a class="text-xl font-light hover:text-gray-500 transition-colors border-b border-black pb-1 inline-block">
+                            jessicacleaverblad@gmail.com
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
