@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blad Story House | Illustration & Art</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#0a0a0a',
+                        white: '#ffffff',
+                        gray: {
+                            100: '#f5f5f5',
+                            300: '#e0e0e0',
+                            500: '#9e9e9e',
+                            900: '#212121',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Minimalist fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-400 { animation-delay: 400ms; }
+        
+        /* Custom selection color for high contrast */
+        ::selection {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-white text-black font-sans antialiased">
+
+    <!-- Fixed Minimalist Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-transparent transition-all duration-300">
+        <div class="max-w-[1400px] mx-auto px-8 md:px-16 py-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+            <a href="#" class="font-serif text-2xl md:text-3xl tracking-wide text-black hover:opacity-70 transition-opacity">
+                Blad Story House
+            </a>
+            <div class="flex flex-wrap justify-center space-x-6 md:space-x-12 text-xs md:text-sm tracking-[0.2em] uppercase font-light">
+                <a href="#styles" class="hover:text-gray-500 transition-colors duration-300 py-2">Styles</a>
+                <a href="#packages" class="hover:text-gray-500 transition-colors duration-300 py-2">Packages</a>
+                <a href="#tell-me-your-story" class="hover:text-gray-500 transition-colors duration-300 py-2">Tell me your story</a>
+                <a href="#about" class="hover:text-gray-500 transition-colors duration-300 py-2">About</a>
+                <a href="#bookshelf" class="hover:text-gray-500 transition-colors duration-300 py-2">Bookshelf</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+<!-- Add this style block anywhere before the section, or up in your <head> -->
+        <style>
+            @keyframes slowPan {
+                0% { object-position: 0% 50%; }
+                50% { object-position: 100% 50%; }
+                100% { object-position: 0% 50%; }
+            }
+            .animate-slow-pan {
+                /* 40s controls the speed, ease-in-out makes it smoothly slow down before reversing */
+                animation: slowPan 60s ease-in-out infinite;
+            }
+        </style>
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-16">
+            <div class="max-w-4xl mx-auto z-10 animate-fade-in mb-16">
+                <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-black leading-none mb-8 tracking-tight">
+                    Blad<br>
+                    <span class="italic font-light text-gray-500">Story House</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-light text-black max-w-2xl mx-auto leading-relaxed tracking-wide">
+                    Tell your story
+                </p>
+            </div>
+
+            <div class="w-full max-w-[1400px] mx-auto animate-fade-in delay-200">
+                <div class="w-full aspect-[15/7.75] overflow-hidden bg-gray-100 mb-12">
+                    <!-- Added the 'animate-slow-pan' class to the image below -->
+                    <img src="images/Jessica/Untitled_Artwork.PNG" alt="Large wide illustration workspace" class="w-full h-full object-cover animate-slow-pan" />
+                </div>
+                <p class="font-light text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-center">
+                    Your story is unique. The publishing world is competitive, but I can personally guide you through your project, bring your story to life with illustrations, design your book into a treasure, and lead you through a low-stress publishing experience.                 </p>
+            </div>
+        </section>
+
+        <!-- Styles Section -->
+        <section id="styles" class="py-32 md:py-48 px-8 md:px-16 max-w-[1600px] mx-auto">
+            <h2 class="font-sans text-xs tracking-[0.3em] uppercase mb-24 text-gray-500 text-center">Selected Styles</h2>
+            
+            <div class="flex flex-col space-y-32">
+                <!-- Whimsical -->
+                <div class="w-full">
+                    <h3 class="font-serif text-3xl md:text-4xl mb-12 text-center">Whimsical</h3>
+                    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-1.jpg" alt="Whimsical illustration 1" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-2.jpg" alt="Whimsical illustration 2" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-3.jpg" alt="Whimsical illustration 3" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-4.jpg" alt="Whimsical illustration 4" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-5.jpg" alt="Whimsical illustration 5" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-6.jpg" alt="Whimsical illustration 6" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-7.jpg" alt="Whimsical illustration 7" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-8.jpg" alt="Whimsical illustration 8" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-9.jpg" alt="Whimsical illustration 9" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Whimsical/whimsical-10.jpg" alt="Whimsical illustration 10" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                    </div>
+                </div>
+                
+                <!-- Cozy -->
+                <div class="w-full">
+                    <h3 class="font-serif text-3xl md:text-4xl mb-12 text-center">Cozy</h3>
+                    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-1.jpg" alt="Cozy illustration 1" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-2.png" alt="Cozy illustration 2" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-3.jpg" alt="Cozy illustration 3" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-4.png" alt="Cozy illustration 4" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-5.jpg" alt="Cozy illustration 5" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-6.jpg" alt="Cozy illustration 6" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-7.jpg" alt="Cozy illustration 7" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-8.png" alt="Cozy illustration 8" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-9.jpg" alt="Cozy illustration 9" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Cozy/cozy-10.png" alt="Cozy illustration 10" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                    </div>
+                </div>
+
+                <!-- Vintage -->
+                <div class="w-full">
+                    <h3 class="font-serif text-3xl md:text-4xl mb-12 text-center">Vintage</h3>
+                    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-1.jpeg" alt="Vintage illustration 1" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-2.png" alt="Vintage illustration 2" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-3.png" alt="Vintage illustration 3" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-4.png" alt="Vintage illustration 4" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-5.jpg" alt="Vintage illustration 5" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-6.png" alt="Vintage illustration 6" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-7.png" alt="Vintage illustration 7" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-8.png" alt="Vintage illustration 8" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Vintage/vintage-9.png" alt="Vintage illustration 9" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                    </div>
+                </div>
+
+                <!-- Semi-Realistic -->
+                <div class="w-full">
+                    <h3 class="font-serif text-3xl md:text-4xl mb-12 text-center">Semi-Realistic</h3>
+                    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-1.png" alt="Semi-Realistic illustration 1" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-2.jpg" alt="Semi-Realistic illustration 2" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-3.png" alt="Semi-Realistic illustration 3" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-4.png" alt="Semi-Realistic illustration 4" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-5.jpg" alt="Semi-Realistic illustration 5" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-6.jpg" alt="Semi-Realistic illustration 6" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-7.jpg" alt="Semi-Realistic illustration 7" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-8.jpg" alt="Semi-Realistic illustration 8" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-9.jpg" alt="Semi-Realistic illustration 9" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                        <div class="break-inside-avoid"><img src="images/Semi-Realistic/semi-realistic-10.jpg" alt="Semi-Realistic illustration 10" class="w-full h-auto bg-gray-100 cursor-zoom-in" onclick="openLightbox(this.src)" /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Packages Section -->
+        <section id="packages" class="py-32 md:py-48 px-8 md:px-16 bg-white border-t border-gray-100">
+            <div class="max-w-[1400px] mx-auto">
+                <h2 class="font-sans text-xs tracking-[0.3em] uppercase mb-32 text-gray-500 text-center">Commission Packages</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-24 text-center">
+                    <!-- Package 1: Story Starter -->
+                    <div class="flex flex-col items-center h-full">
+                        <svg class="w-8 h-8 mb-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v16m8-8H4"></path></svg>
+                        <h3 class="font-serif text-3xl mb-2">Story Starter</h3>
+                        <p class="font-sans text-sm tracking-widest text-gray-400 mb-8">$500 - $1,000</p>
+                        <ul class="font-light text-gray-500 mb-12 space-y-3">
+                            <li>Editing / Formatting</li>
+                            <li>Publishing</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 2: Complete Childrens Book -->
+                    <div class="flex flex-col items-center h-full">
+                        <svg class="w-8 h-8 mb-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" stroke-width="1"></rect><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 9h18M9 21V9"></path></svg>
+                        <h3 class="font-serif text-3xl mb-2">Complete Childrens Book</h3>
+                        <p class="font-sans text-sm tracking-widest text-gray-400 mb-8">$2,500 - $5,000</p>
+                        <ul class="font-light text-gray-500 mb-12 space-y-3">
+                            <li>Editing / Formatting</li>
+                            <li>Illustrations / Cover Art</li>
+                            <li>Publishing</li>
+                            <li>Advertising Assistance</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 3: Premium -->
+                    <div class="flex flex-col items-center h-full">
+                        <svg class="w-8 h-8 mb-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke-width="1" stroke-linejoin="round"></polygon></svg>
+                        <h3 class="font-serif text-3xl mb-2">Premium</h3>
+                        <p class="font-sans text-sm tracking-widest text-gray-400 mb-8">$4,000 - $8,000</p>
+                        <ul class="font-light text-gray-500 mb-12 space-y-3">
+                            <li>Editing / Formatting</li>
+                            <li>Illustration / Cover Art</li>
+                            <li>Publishing</li>
+                            <li>Marketing</li>
+                            <li>Social Media Assistance</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <p class="text-xs tracking-widest uppercase border-b border-black inline-block pb-2 hover:text-gray-500 transition-colors cursor-pointer">Inquire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tell me your story Section -->
+        <section id="tell-me-your-story" class="py-48 px-8 md:px-16 flex items-center justify-center min-h-[80vh]">
+            <div class="max-w-4xl mx-auto w-full text-center">
+                <h2 class="font-serif text-5xl md:text-7xl mb-12 leading-tight">Tell me your story.</h2>
+                <form class="max-w-2xl mx-auto space-y-12">
+                    <div class="relative">
+                        <input type="text" placeholder="Your Name" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
+                    </div>
+                    <div class="relative">
+                        <input type="email" placeholder="Email Address" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300">
+                    </div>
+                    <div class="relative">
+                        <textarea placeholder="Describe the vision..." rows="3" class="w-full bg-transparent border-b border-gray-300 py-4 text-xl font-light focus:outline-none focus:border-black transition-colors placeholder-gray-300 resize-none"></textarea>
+                    </div>
+                    <button type="button" class="mt-8 px-16 py-6 bg-black text-white text-xs tracking-[0.2em] uppercase hover:bg-gray-800 transition-colors w-full md:w-auto">
+                        Begin Narrative
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 md:py-48 px-8 md:px-16 max-w-[1600px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center">
+                <div class="w-full aspect-[4/5] overflow-hidden bg-gray-100 order-2 md:order-1">
+                    <img src="images/Jessica/jessica_drawing.jpg" alt="Artist portrait" class="w-full h-full object-cover" />
+                </div>
+                <div class="order-1 md:order-2 flex flex-col justify-center">
+                    <h2 class="font-sans text-xs tracking-[0.3em] uppercase mb-12 text-gray-500">Illustrator & Publishing Consultant</h2>
+                    <h3 class="font-serif text-5xl mb-8 leading-tight"> Jessica Cleaver Blad</h3>
+                    <p class="font-light text-lg text-gray-600 mb-8 leading-relaxed">
+                        Jessica Cleaver Blad is an illustrator, designer, and storyteller with a passion for bringing children’s stories to life. She earned her degree in Illustration & Publishing from Brigham Young University–Idaho and has illustrated and published multiple children’s books, including her most recent title, If I Could Fly.
+
+Jessica’s mission is to help aspiring authors share their stories with the world through thoughtful, imaginative illustrations. She enjoys guiding new authors through the self-publishing process, making the journey approachable. She loves the moment when the book is finally held by the author. 
+                    <p class="font-light text-lg text-gray-600 leading-relaxed">
+                    </p>
+                </div>
+            </div>
+        </section>
+
+<!-- Books Section -->
+        <section id="bookshelf" class="py-32 md:py-48 px-8 md:px-16 bg-black text-white">
+            <div class="max-w-[1600px] mx-auto">
+                <h2 class="font-sans text-xs tracking-[0.3em] uppercase mb-16 text-gray-400">The Bookshelf</h2>
+                
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <!-- Section Intro (Left Column) -->
+                    <div class="lg:w-1/3">
+                        <h3 class="font-serif text-5xl mb-8">Publications</h3>
+                        <p class="font-light text-xl text-gray-400 leading-relaxed mb-8">
+                            Add your story to the Blad Story House bookshelf.
+                        </p>
+                    </div>
+                    
+                    <!-- Stacked Books (Right Column) -->
+                    <div class="lg:w-2/3 w-full flex flex-col gap-16 md:gap-24">
+                        
+                        <!-- Book 1: If I Could Fly -->
+                        <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start group cursor-pointer">
+                            <div class="w-full md:w-2/5 aspect-[3/4] overflow-hidden bg-gray-900 relative shrink-0">
+                                <img src="images/Jessica/IF I could fly cover.jpeg" alt="If I Could Fly cover" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                            </div>
+                            <div class="w-full md:w-3/5 pt-4 md:pt-8">
+                                <h4 class="font-serif text-3xl mb-2">If I Could Fly</h4>
+                                <p class="font-sans text-xs tracking-[0.2em] text-gray-500 uppercase mb-6">Illustrated Book</p>
+                                <p class="font-light text-gray-400 leading-relaxed">
+                                    Replace this text with a short summary of the book. Describe the narrative, the whimsical illustration style, and what makes this story unique for your readers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Book 2: Wilfred Woodruff Papers -->
+                        <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start group cursor-pointer">
+                            <div class="w-full md:w-2/5 aspect-[3/4] overflow-hidden bg-gray-900 relative shrink-0">
+                                <img src="images/Jessica/Wilford Woodruff cover.jpeg" alt="Wilfred Woodruff Papers cover" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                            </div>
+                            <div class="w-full md:w-3/5 pt-4 md:pt-8">
+                                <h4 class="font-serif text-3xl mb-2">Wilfred Woodruff Papers</h4>
+                                <p class="font-sans text-xs tracking-[0.2em] text-gray-500 uppercase mb-6">Illustrated Collection</p>
+                                <p class="font-light text-gray-400 leading-relaxed">
+                                    Replace this text with a short summary of this collection. You can discuss the historical context, the visual tone of the artwork, or the scope of the project.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-8 md:px-16 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-gray-400 font-light">
+        <p>&copy; 2026 Blad Story House.</p>
+        <div class="space-x-8 mt-6 md:mt-0">
+            <a href="#" class="hover:text-black transition-colors">Instagram</a>
+            <a href="#" class="hover:text-black transition-colors">Behance</a>
+        </div>
+    </footer>
+
+
+
+    <!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-white/98 flex items-center justify-center p-4 md:p-12 cursor-zoom-out transition-opacity duration-300" onclick="closeLightbox()">
+    <img id="lightboxImage" src="" class="max-w-full max-h-full object-contain shadow-2xl" />
+</div>
+
+
+<script>
+    function openLightbox(imageSrc) {
+        document.getElementById('lightboxImage').src = imageSrc;
+        document.getElementById('lightbox').classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Stops the background page from scrolling
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Turns scrolling back on
+    }
+</script>
+
+</body>
+</html>
